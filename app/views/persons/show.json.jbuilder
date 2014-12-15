@@ -1,0 +1,1 @@
+json.extract! @person, :name, :age, :email, :employer, :notes
