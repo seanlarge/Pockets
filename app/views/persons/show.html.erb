@@ -1,0 +1,27 @@
+<% if notice %>
+  <div id="notice" class="well bg-info">
+    <%= notice %>
+  </div>
+<% end %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>
+      <%= @person.name %>
+      <br>
+    </h1>
+  </div>
+
+  <div class="panel-body lead">
+    <%= @post.text %>
+  </div>
+
+
+
+
+    <div class="row">
+      <p class="col-md-6 text-left">
+        <%= link_to 'Edit Person', edit_person_path(@post), class: 'btn btn-info' %>
+        <%= link_to 'Back', persons_path, class: 'btn btn-default' %>
+      </p>
+    </div>

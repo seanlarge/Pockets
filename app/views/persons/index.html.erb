@@ -1,0 +1,21 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="text-center">Listing persons</h1>
+  </div>
+
+<table class="table">
+    <% @persons.each do |person| %>
+      <tr>
+        <td><%= person.name %></td>
+        <td><%= person.age %></td>
+        <td><%= person.email %></td>
+        <td><%= person.employer %></td>
+        <td><%= person.notes %></td>
+
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<%= link_to 'New person', new_person_path %>
