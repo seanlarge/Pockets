@@ -1,7 +1,7 @@
 class User
   include Neo4j::ActiveNode
-
-  has_many :both, :knows, model_class: Person
+  after_create :create_person
+  has_one :out, :person
 
   #
   # Neo4j.rb needs to have property definitions before any validations. So, the property block needs to come before
@@ -63,5 +63,9 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-
+  def create_person
+    new_person = Person.create!(email: self.email)
+    self.person = new_person
+    self.save!
+  end
 end

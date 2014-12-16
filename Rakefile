@@ -2,5 +2,7 @@
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
 require File.expand_path('../config/application', __FILE__)
-require 'neo4j/tasks/neo4j_server'
+# grabbed neo4j tasks from tutorial.
+# TODO: raise error.  Didn't see this file in neo4j.
+# require 'neo4j/tasks/neo4j_server'
 Rails.application.load_tasks

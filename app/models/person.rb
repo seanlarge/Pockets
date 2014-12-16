@@ -1,7 +1,6 @@
 class Person
   include Neo4j::ActiveNode
-
-
+  has_one :in, :user
   property :name
   property :age, type: Integer
   property :title
