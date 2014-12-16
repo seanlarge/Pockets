@@ -13,7 +13,7 @@
   </div>
 
   <div class="panel-body lead">
-    <%= @post.text %>
+    <%= @person.age %>
   </div>
 
 
@@ -21,7 +21,7 @@
 
     <div class="row">
       <p class="col-md-6 text-left">
-        <%= link_to 'Edit Person', edit_person_path(@post), class: 'btn btn-info' %>
-        <%= link_to 'Back', persons_path, class: 'btn btn-default' %>
+        <%= link_to 'Edit Person', edit_person_path(@person), class: 'btn btn-info' %>
+        <%= link_to 'Back', people_path, class: 'btn btn-default' %>
       </p>
     </div>
