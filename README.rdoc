@@ -8,6 +8,8 @@ D3js
 HTML
 CSS
 
+Installing Neo4j: http://neo4j.com/docs/stable/server-installation.html 
+
 For using a Neo4j Database with rails I found this good blog post here: http://blog.benmorgan.io/post/88913410501/getting-started-with-neo4j-ruby-2-1-2-and-rails
 
 For installing Devise with Neo4j see : https://github.com/cheerfulstoic/devise-neo4j
