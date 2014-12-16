@@ -1,6 +1,6 @@
-class PersonsController < ApplicationController
-  # before_action :authenticate_person!
+class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
+  # before_filter :authenticate_user!
 
   def index
     @persons = Person.all
@@ -17,7 +17,7 @@ class PersonsController < ApplicationController
   def create
     @person = Person.new(person_params)
     respond_to do |format|
-      if @post.save
+      if @person.save
         format.html { redirect_to @person, notice: 'Person was successfully created' }
         format.json { render action: 'show', status: :created, location: @person}
       else
@@ -30,7 +30,7 @@ class PersonsController < ApplicationController
 
   def update
     respond_to do |format|
-      if @person.update(post_params)
+      if @person.update(person_params)
         format.html { redirect_to @person, notice: 'person was successfully updated.' }
         format.json { head :no_content }
       else
