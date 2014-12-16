@@ -10,18 +10,6 @@ GIT
       orm_adapter (~> 0.5.0)
       railties (~> 4)
 
-GIT
-  remote: git@github.com:cheerfulstoic/devise-neo4j.git
-  revision: 75a565553637fa52efe28627fa5dad63bdb5f247
-  specs:
-    devise-neo4j (2.0.0.alpha.1)
-      bcrypt-ruby (~> 3.0)
-      devise (~> 3.0)
-      neo4j (>= 3.0.0.alpha.6)
-      orm_adapter (~> 0.5.0)
-      railties (>= 3.1)
-      warden (~> 1.2.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -74,6 +62,13 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-neo4j (2.0.0.alpha.1)
+      bcrypt-ruby (~> 3.0)
+      devise (~> 3.0)
+      neo4j (>= 3.0.0.alpha.6)
+      orm_adapter (~> 0.5.0)
+      railties (>= 3.1)
+      warden (~> 1.2.1)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.2.2)
@@ -185,7 +180,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   coffee-rails (~> 4.0.0)
-  devise-neo4j!
+  devise-neo4j (~> 2.0.0.alpha.1)
   jbuilder (~> 2.0)
   jquery-rails
   neo4j!

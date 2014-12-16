@@ -23,7 +23,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'thin'
 gem 'neo4j', github: 'andreasronge/neo4j'
-gem "devise-neo4j", git: 'git@github.com:cheerfulstoic/devise-neo4j.git'
+gem "devise-neo4j", "~> 2.0.0.alpha.1"
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development do
   gem 'os'
