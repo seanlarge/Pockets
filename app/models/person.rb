@@ -8,7 +8,4 @@ class Person
   property :email
   property :employer
   property :notes
-
-
-
 end
