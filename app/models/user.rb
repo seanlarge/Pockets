@@ -64,7 +64,7 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   def create_person
-    new_person = Person.create!(email: self.email)
+    new_person = Person.create!(email: self.email, name: self.email)
     self.person = new_person
     self.save!
   end
