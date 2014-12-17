@@ -11,4 +11,5 @@ class ApplicationController < ActionController::Base
   def current_person
     current_user.person
   end
+  helper_method :current_person
 end

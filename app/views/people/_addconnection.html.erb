@@ -1,0 +1,47 @@
+<%= form_for(@connection) do |f| %>
+      <% if @connection.errors.any? %>
+          <h2><%= pluralize(@connection.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+          <% @connection.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+      <% end %>
+
+
+      <%= hidden_field_tag 'person_id', @person.id %>
+
+      <div>
+        <%= f.label :name %><br />
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+
+      <div>
+        <%= f.label :title %><br />
+        <%= f.text_field :title %>
+      </div>
+
+      <div>
+        <%= f.label :age %><br />
+        <%= f.number_field :age%>
+      </div>
+
+      <div class="field form-group col-md-12">
+        <%= f.label :email %><br />
+        <%= f.text_area :email, class: 'form-control' %>
+      </div>
+
+      <div class="field form-group col-md-12">
+        <%= f.label :employer %><br />
+        <%= f.text_area :employer, class: 'form-control' %>
+      </div>
+
+      <div class="field form-group col-md-12">
+        <%= f.label :notes %><br />
+        <%= f.text_area :notes, class: 'form-control' %>
+      </div>
+
+
+      <div class="actions form-group col-md-12">
+        <%= f.submit "Add Connection", class: 'btn btn-primary' %>
+      </div>
+    <% end %>
