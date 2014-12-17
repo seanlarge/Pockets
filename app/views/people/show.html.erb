@@ -21,7 +21,7 @@
   <tbody>
     <% @person.knows.each do |contact| %>
     <tr>
-      <td><%= contact.name %></td>
+      <td><%= link_to(contact.name, person_path(contact)) %></td>
       <td><%= contact.age %></td>
       <td><%= contact.title %></td>
       <td><%= contact.email %></td>
