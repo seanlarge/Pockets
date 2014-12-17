@@ -62,13 +62,7 @@ class PeopleController < ApplicationController
     params.require(:person).permit(:name, :age, :email, :employer, :notes)
   end
 
-  def set_connection
-    @connection = Person.new(connection_params)
-  end
 
-  def connection_params
-    params.require(:connection).permit(:name, :age, :email, :employer, :notes)
-  end
 
 end
 
