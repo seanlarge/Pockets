@@ -1,26 +1,45 @@
 <% if notice %>
-  <div id="notice" class="well bg-info">
-    <%= notice %>
-  </div>
+<div id="notice" class="well bg-info">
+  <%= notice %>
+</div>
 <% end %>
+<h1>
+<%= @person.name %>
+<br>
+</h1>
+<%= @person.age %>
+<%= @person.title %>
+<%= @person.email %>
+<%= @person.employer %>
+<%= @person.notes %>
+<br>
+<br>
+<%= link_to 'Edit Person', edit_person_path(@person), class: 'btn btn-info' %>
+<h1> Connections of <%=@person.name %>  </h1>
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h1>
-      <%= @person.name %>
-      <br>
-    </h1>
-  </div>
+<table>
+  <tbody>
+    <% @person.knows.each do |contact| %>
+    <tr>
+      <td><%= link_to(contact.name, person_path(contact)) %></td>
+      <td><%= contact.age %></td>
+      <td><%= contact.title %></td>
+      <td><%= contact.email %></td>
+      <td><%= contact.employer %></td>
+      <td><%= contact.notes %></td>
+    </tr>
 
-  <div class="panel-body lead">
-    <%= @person.age %>
-  </div>
+    <% end %>
+  </tbody>
+</table>
 
-</div>
+<h1> Add Connection to <%=@person.name %>  </h1>
 
-<div class="row">
-  <p class="col-md-6 text-left">
-    <%= link_to 'Edit Person', edit_person_path(@person), class: 'btn btn-info' %>
-    <%= link_to 'Back', people_path, class: 'btn btn-default' %>
-  </p>
-</div>
+<%= render 'addconnection' %>
+
+
+
+<p>
+
+<%= link_to 'Back', people_path, class: 'btn btn-default' %>
+</p>

@@ -22,10 +22,14 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'thin'
-gem 'neo4j', github: 'andreasronge/neo4j'
+gem 'neo4j', '~> 3.0.4'
 gem "devise-neo4j", "~> 2.0.0.alpha.1"
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development do
+
+group :development, :test do
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'spring'
   gem 'os'
   gem 'better_errors'
   gem 'binding_of_caller'

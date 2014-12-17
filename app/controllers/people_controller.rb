@@ -3,11 +3,11 @@ class PeopleController < ApplicationController
 
 
   def index
-    @persons = current_person.knows
+    @people = current_person.knows
   end
 
   def show
-     @person = current_person.knows.find(params[:id])
+    @connection = Person.new
   end
 
   def new
@@ -16,10 +16,10 @@ class PeopleController < ApplicationController
   end
 
   def create
-    # TODO: associate new person with current_user
-    @person = Person.new(person_params)
-    current_person.knows << @person
-    current_person.save!
+    @person = Person.find(params[:person_id])
+    @connection = Person.new(person_params)
+    @person.knows << @connection
+
     respond_to do |format|
       if @person.save
         format.html { redirect_to @person, notice: 'Person was successfully created' }
@@ -47,7 +47,7 @@ class PeopleController < ApplicationController
   def destroy
     @person.destroy
     respond_to do |format|
-      format.html { redirect_to persons_url }
+      format.html { redirect_to people_url }
       format.json { head :no_content }
     end
   end
@@ -61,6 +61,8 @@ class PeopleController < ApplicationController
   def person_params
     params.require(:person).permit(:name, :age, :email, :employer, :notes)
   end
+
+
 
 end
 
