@@ -15,7 +15,7 @@ For using a Neo4j Database with rails I found this good blog post here: http://b
 Post also walks through how you need to deploy to heroku.
 
 
-For installing Devise with Neo4j and using Neo4j with Ruby in general: https://github.com/neo4jrb
+For installing Devise with Neo4j and using Neo4j with Ruby in general: https://github.com/neo4jrb more specifically https://github.com/neo4jrb/neo4j/wiki
 
 
 gem 'neo4j', '~> 3.0.4'
