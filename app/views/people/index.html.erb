@@ -16,7 +16,7 @@
     </tr>
     <% @persons.each do |person| %>
       <tr>
-        <td><%= person.name %></td>
+        <td><%= link_to(person.name, person_path(person.id)) %></td>
         <td><%= person.age %></td>
         <td><%= person.title %></td>
         <td><%= person.email %></td>

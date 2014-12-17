@@ -1,21 +1,25 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
-  # before_filter :authenticate_user!
+
 
   def index
-    @persons = Person.all
+    @persons = current_person.knows
   end
 
   def show
-     @person = Person.find(params[:id])
+     @person = current_person.knows.find(params[:id])
   end
 
   def new
     @person = Person.new
+
   end
 
   def create
+    # TODO: associate new person with current_user
     @person = Person.new(person_params)
+    current_person.knows << @person
+    current_person.save!
     respond_to do |format|
       if @person.save
         format.html { redirect_to @person, notice: 'Person was successfully created' }
