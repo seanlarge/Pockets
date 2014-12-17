@@ -11,7 +11,12 @@ CSS
 Installing Neo4j: http://neo4j.com/docs/stable/server-installation.html 
 
 For using a Neo4j Database with rails I found this good blog post here: http://blog.benmorgan.io/post/88913410501/getting-started-with-neo4j-ruby-2-1-2-and-rails
+**Note- you do not have to update the rakefile once you get to that step on the blog keep this in mind**
+Post also walks through how you need to deploy to heroku.
 
-For installing Devise with Neo4j see : https://github.com/cheerfulstoic/devise-neo4j
+
+For installing Devise with Neo4j and using Neo4j with Ruby in general: https://github.com/neo4jrb
 
 
+gem 'neo4j', '~> 3.0.4'
+gem "devise-neo4j", "~> 2.0.0.alpha.1"
