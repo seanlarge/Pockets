@@ -13,4 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require vendor
+//= require alchemy
+//= require alchemyConfig
+//= require neo
+//= require cy2neo
+//= require persons
+
