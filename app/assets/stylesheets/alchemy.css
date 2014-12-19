@@ -162,12 +162,12 @@ svg {
 
 .edge {
   stroke-width: 2;
-  stroke: #ccc;
-  stroke-opacity: 0.2;
+  stroke: white;
+  stroke-opacity: 0.9;
 }
 
 .edge.active {
-  opacity: 1;
+  opacity: .9;
 }
 
 .edge.active:hover,
@@ -182,18 +182,18 @@ svg {
   opacity: .8 !important;
   stroke-width: 2 !important;
   stroke-opacity: .7 !important;
-  stroke: #fff !important;
+  stroke: white !important;
 }
 
 .edge.inactive {
-  opacity: 0;
+  opacity: .9;
 }
 
 .edge.inactive.highlight {
   opacity: .8 !important;
   stroke-width: 2 !important;
   stroke-opacity: .5 !important;
-  stroke: #e89619 !important;
+  stroke: white !important;
 }
 
 #loading-spinner {
