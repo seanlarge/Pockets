@@ -43,6 +43,7 @@ function Neo(urlSource) {
 							   }
 							});
 							rels = rels.concat(row.graph.relationships.map(function(r) { return { source:r.startNode, target:r.endNode, caption:r.type} }));
+							console.log(rels)
 						});
 						cb(null,{table:rows,graph:{nodes:nodes, edges:rels},labels:labels});
 					}

@@ -29,7 +29,7 @@ function Cy2Neo(config, graphId, sourceId, execId, urlSource) {
 			// evt.preventDefault();
 			// var query = editor.getValue();
 			var query = " MATCH (p) RETURN (p)";
-			query = "MATCH n RETURN n";
+			query = "MATCH (n)-[r]->(m) RETURN n,r,m";
 			console.log("Executing Query",query);
 			neo.executeQuery(query,{},function(err,res) {
 				res = res || {}

@@ -162,7 +162,7 @@ svg {
 
 .edge {
   stroke-width: 2;
-  stroke: #ccc;
+  stroke: white;
   stroke-opacity: 0.2;
 }
 
