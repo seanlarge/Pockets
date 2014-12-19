@@ -162,12 +162,12 @@ svg {
 
 .edge {
   stroke-width: 2;
-  stroke: white;
-  stroke-opacity: 0.9;
+  stroke: #ccc;
+  stroke-opacity: 0.2;
 }
 
 .edge.active {
-  opacity: .9;
+  opacity: 1;
 }
 
 .edge.active:hover,
@@ -182,18 +182,18 @@ svg {
   opacity: .8 !important;
   stroke-width: 2 !important;
   stroke-opacity: .7 !important;
-  stroke: white !important;
+  stroke: #fff !important;
 }
 
 .edge.inactive {
-  opacity: .9;
+  opacity: 0;
 }
 
 .edge.inactive.highlight {
   opacity: .8 !important;
   stroke-width: 2 !important;
   stroke-opacity: .5 !important;
-  stroke: white !important;
+  stroke: #e89619 !important;
 }
 
 #loading-spinner {
@@ -584,3 +584,40 @@ svg {
   font-weight: 200;
   text-anchor: middle;
 }
+svg {
+  background: #333;
+}
+.CodeMirror, .CodeMirror-scroll {
+  height:auto;
+}
+
+#execute {
+   font-size:30px;
+   position:absolute;
+   top: 0.6em;
+   right: 10em;
+}
+
+#neo4jUrl {
+   position:absolute;
+   right: 5px;
+   top: 1em;
+   z-index: 100;
+   width: 20em;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

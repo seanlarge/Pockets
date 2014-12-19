@@ -6,6 +6,6 @@ $(document).ready(function() {
     config.nodeMouseOver = function(n) {return n.id + "<br/>"+n.name || n.title;};
 
 
-    config.neo4jUrl="http://localhost:7474/db/data";
+    config.neo4jUrl= "http://localhost:7474/db/data";
     new Cy2Neo(config,"graph","cypher","execute", function() { return $("#neo4jUrl").val(); });
   });
