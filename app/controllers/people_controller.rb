@@ -20,6 +20,9 @@ class PeopleController < ApplicationController
     @connection = Person.new(person_params)
     @person.knows << @connection
 
+    # if @connection.name || @person.name
+    #   @person.find(params[:person_id]).knows << @connection(person_params)
+
     respond_to do |format|
       if @person.save
         format.html { redirect_to @person, notice: 'Person was successfully created' }
