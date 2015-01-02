@@ -9,7 +9,7 @@ function Cy2Neo(config, graphId, sourceId, execId, urlSource) {
 		//   enterMode: "keep",
 		//   value: "some value"
 		// });
-    // }
+  //   }
 	function initAlchemyConfig() {
 		config.divSelector="#"+graphId;
 		config.dataSource={nodes:[],edges:[]};
@@ -29,7 +29,11 @@ function Cy2Neo(config, graphId, sourceId, execId, urlSource) {
 			// evt.preventDefault();
 			// var query = editor.getValue();
 			var query = " MATCH (p) RETURN (p)";
+<<<<<<< HEAD
 			query = "MATCH (n)-[r]->(m) RETURN n,r,m";
+=======
+			query = "MATCH (a)-[r]-(b) RETURN a,b ";
+>>>>>>> 57c9cf513832c0d318488c606d89fc4415026e32
 			console.log("Executing Query",query);
 			neo.executeQuery(query,{},function(err,res) {
 				res = res || {}

@@ -162,12 +162,17 @@ svg {
 
 .edge {
   stroke-width: 2;
+<<<<<<< HEAD
   stroke: black;
   stroke-opacity: 1;
+=======
+  stroke: white;
+  stroke-opacity: 0.9;
+>>>>>>> 57c9cf513832c0d318488c606d89fc4415026e32
 }
 
 .edge.active {
-  opacity: 1;
+  opacity: .9;
 }
 
 .edge.active:hover,
@@ -182,18 +187,31 @@ svg {
   opacity: .8 !important;
   stroke-width: 2 !important;
   stroke-opacity: .7 !important;
+<<<<<<< HEAD
   stroke: black !important;
 }
 
 .edge.inactive {
   opacity: 1;
+=======
+  stroke: white !important;
+}
+
+.edge.inactive {
+  opacity: .9;
+>>>>>>> 57c9cf513832c0d318488c606d89fc4415026e32
 }
 
 .edge.inactive.highlight {
   opacity: .8 !important;
   stroke-width: 2 !important;
+<<<<<<< HEAD
   stroke-opacity: .8 !important;
   stroke: #e89619 !important;
+=======
+  stroke-opacity: .5 !important;
+  stroke: white !important;
+>>>>>>> 57c9cf513832c0d318488c606d89fc4415026e32
 }
 
 #loading-spinner {
