@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Pockets</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
-</body>
+  <head>
+    <title>Pockets</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <body>
+    <div id="user_nav">
+      <% if user_signed_in? %>
+      Signed in as <%= current_user.email %>.
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+      <% end %>
+    </div>
+    <%= yield %>
+  </body>
 </html>

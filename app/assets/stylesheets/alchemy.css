@@ -78,7 +78,7 @@
 }
 
 svg {
-  background: black;
+  background: white;
   position: absolute;
   cursor: -webkit-grab;
   height: 100%;
@@ -162,8 +162,8 @@ svg {
 
 .edge {
   stroke-width: 2;
-  stroke: #ccc;
-  stroke-opacity: 0.2;
+  stroke: black;
+  stroke-opacity: 1;
 }
 
 .edge.active {
@@ -172,7 +172,7 @@ svg {
 
 .edge.active:hover,
 .edge.active.selected {
-  stroke: white !important;
+  stroke: black !important;
   cursor: pointer;
   stroke-opacity: 1;
   stroke-width: 4;
@@ -182,17 +182,17 @@ svg {
   opacity: .8 !important;
   stroke-width: 2 !important;
   stroke-opacity: .7 !important;
-  stroke: #fff !important;
+  stroke: black !important;
 }
 
 .edge.inactive {
-  opacity: 0;
+  opacity: 1;
 }
 
 .edge.inactive.highlight {
   opacity: .8 !important;
   stroke-width: 2 !important;
-  stroke-opacity: .5 !important;
+  stroke-opacity: .8 !important;
   stroke: #e89619 !important;
 }
 
